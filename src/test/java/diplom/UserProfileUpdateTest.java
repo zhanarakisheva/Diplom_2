@@ -1,22 +1,15 @@
 package diplom;
 
-import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Map;
 import java.util.UUID;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.equalTo;
 
-public class UserProfileUpdateTest {
-
-    @Before
-    public void setUp() throws Exception {
-        RestAssured.baseURI = "https://stellarburgers.nomoreparties.site/api/";
-    }
+public class UserProfileUpdateTest extends StellarBurgersApiTest {
 
     @Test
     public void updateNameTest() {
